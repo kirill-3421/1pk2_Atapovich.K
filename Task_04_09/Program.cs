@@ -13,7 +13,7 @@
             int[] array = new int[30];
             Random rand = new Random();
 
-            // заполнение массива случайными числами и вывод этого массива
+            // заполнение массива случайными числами и вывод этого массива в консоль
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = rand.Next(1, 31);
@@ -25,7 +25,7 @@
             int[] uniqueElements = new int[array.Length];
             int uniqueCount = 0;
 
-            // создание циклов для работы с элементами массивов и поиска уникального
+            // создание циклов для работы с элементами массивов и поиска уникального элемента
             for (int i = 0; i < array.Length; i++)
             {
                 bool isUnique = true;
