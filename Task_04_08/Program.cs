@@ -30,9 +30,9 @@
                 }
             }
 
-            // вывод количества пар
+            // вывод количества равных пар
             Console.WriteLine("Массив: " + string.Join(",", array));
-            Console.WriteLine($"Количество пар: {pairOfCount}");
+            Console.WriteLine($"Количество равных пар: {pairOfCount}");
         }
     }
 }
