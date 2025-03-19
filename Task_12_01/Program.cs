@@ -9,7 +9,7 @@
             cat.MakeSound();
 
             Dog dog = new Dog("Барбос", 5, "бело-чёрного");
-            dog.GetInfo();
+            dog.GetInfo();//вызов класса
             dog.MakeSound();
         }
     }
