@@ -49,11 +49,11 @@
             {
                 if (result.ContainsKey(pair.Key))
                 {
-                    result[pair.Key] += pair.Value; // Суммируем значения
+                    result[pair.Key] += pair.Value;
                 }
                 else
                 {
-                    result[pair.Key] = pair.Value; // Добавляем новый ключ и значение
+                    result[pair.Key] = pair.Value; // Добавляется новый ключ и значение
                 }
             }
 
