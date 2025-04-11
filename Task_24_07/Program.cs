@@ -13,10 +13,17 @@
             string searchWord = "хозяйство";
             List<string> foundLines = FindLines(filePath, searchWord);
 
-            Console.WriteLine($"Строки, содержащие слово \"{searchWord}\": ");
-            foreach (string line in foundLines)
+            if (foundLines.Count > 0)
             {
-                Console.WriteLine(line);
+                Console.WriteLine($"Cтроки, содержащие слово \"{searchWord}\":");
+                foreach (string line in foundLines)
+                {
+                    Console.WriteLine(line);
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Слово \"{searchWord}\" не найдено в файле.");
             }
         }
 
