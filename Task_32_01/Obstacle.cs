@@ -15,6 +15,6 @@ namespace Task_32_01
             Name = name;
         }
 
-        public abstract int AffectSpeed(int currentSpeed);
+        public abstract int ModifySpeed(int currentSpeed);
     }
 }

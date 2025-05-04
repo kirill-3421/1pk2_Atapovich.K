@@ -14,13 +14,13 @@ namespace Task_32_01
         public Kolobok()
         {
             Position = 0;
-            Speed = 1;
+            Speed = 6;
             IsAlive = true;
         }
         public void Roll()
         {
-            Position += Speed;
-            Console.WriteLine($"Колобок катится, текущая позиция: {Position}, скорость: {Speed}");
+            Position ++;
+            Console.WriteLine($"Колобок катится, текущая позиция: {Position}, скорость: {Speed}км/ч\n");
         }
         //встреча с животным
         public void MeetAnimal(Animal animal)
@@ -37,16 +37,10 @@ namespace Task_32_01
         }
 
         //столкновения с препятствиями
-        public void EncounterObstacle(Obstacle obstacle)
+        public void MeetObstacle(Obstacle obstacle)
         {
-            int newSpeed = obstacle.AffectSpeed(this.Speed);
-            if (newSpeed < 0) newSpeed = 0;
-
-            if (newSpeed != this.Speed)
-            {
-                Console.WriteLine($"Колобок встретил {obstacle.Name} и его скорость изменилась с {this.Speed} до {newSpeed}!");
-                this.Speed = newSpeed;
-            }
+            Speed = obstacle.ModifySpeed(Speed);
+            Console.WriteLine($"Колобок столкнулся с {obstacle.Name} и его скорость стала - {Speed}км/ч!\n");
         }
     }
 }

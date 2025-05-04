@@ -9,6 +9,11 @@ namespace Task_32_01
     public class Stone : Obstacle
     {
         public Stone() : base("Камень") { }
-        public override int AffectSpeed(int currentSpeed) => currentSpeed - 1;
+
+        public override int ModifySpeed(int currentSpeed)
+        {
+            // Камень уменьшает скорость на 1, но не меньше 0
+            return Math.Max(currentSpeed - 2, 0);
+        }
     }
 }

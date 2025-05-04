@@ -11,10 +11,11 @@ namespace Task_32_01
             {
                 new Hare(),
                 new Wolf(),
-                new Bear(),
-                new Fox(),
                 new Stone(),
-                new Mud()
+                new Bear(),
+                new Mud(),
+                new Fox(),
+                
             };
             foreach (var encounter in encounters)
             {
@@ -29,9 +30,8 @@ namespace Task_32_01
                 }
                 else if (encounter is Obstacle obstacle)
                 {
-                    kolobok.EncounterObstacle(obstacle);
+                    kolobok.MeetObstacle(obstacle);
                 }
-                
             }
 
             if (kolobok.IsAlive)
